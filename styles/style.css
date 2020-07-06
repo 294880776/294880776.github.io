@@ -22,14 +22,14 @@ nav{
   display: block;
   overflow: hidden;
   transition: 0.6s all;
-  padding: 14px 30px;
+  padding: 14px 90px;
   text-transform: uppercase;
 }
 #menu li a:before{
   content: "";
-  width: 50px;
+  width: 40px;
   position: absolute;
-  border-bottom: 8px solid #313131;
+  border-bottom: 3px solid #313131;
   bottom: 0;
   right: 350px;
   transition: 0.6s all;
@@ -53,15 +53,13 @@ h1 {
 }
 
 h2 {
-  font-size: 19px;
+  font-size: 25px;
   letter-spacing: 0.8px;
+  text-align:center;
 }
 
-p, li {
-  font-size: 15px;
-  line-height: 1.9;
-  letter-spacing: 1px;
-  text-indent:2em;
+ li {
+   flex-direction: column;
 }
 
 html {
@@ -69,11 +67,21 @@ html {
 }
 
 body {
-  width: 1200px;
+  width: 1300px;
   margin: 0 auto;
   background-color: #f3f3f3;
-  padding: 0 20px 20px 20px;
   border: 1px solid #0000002e;
+  font-size: 15px;
+  line-height: 1.9;
+  letter-spacing: 1px;
+  text-align:center;
+}
+
+a:link {
+  color: #90236f;
+}
+a:hover {
+    text-decoration: none;
 }
 
 img {
@@ -81,4 +89,12 @@ img {
   margin: 0 auto;
   width: 40%;
   height: auto;
+}
+
+footer{
+  margin: 0;
+  padding: 0;
+  background: #393a41;
+  text-align:center;
+  color: #d7d7d7
 }
