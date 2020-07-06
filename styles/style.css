@@ -1,8 +1,58 @@
-nav{
-  margin: 0;
-  padding: 0;
-  background: #ffffff;
-  text-align:center;
+* {
+  margin: 0; /* 外边距 */
+  padding: 0; /* 内边距 */
+  box-sizing: border-box; /* 盒子大小规则 */
+  font-family: sans-serif; /* 字体样式 */
+}
+
+header {
+  position: fixed; /* 根据浏览器进行定位 */
+  top: 0;
+  left: 0;
+  width: 100%; /* 宽 */
+  display: flex; /* 弹性盒模型 */
+  justify-content: space-between; /* 主轴对齐方式 */
+  align-items: center; /* 交叉轴对齐方式 */
+  transition: 0.6s; /* 过渡时间 */
+  padding: 40px 100px;
+  z-index: 1000; /* 层叠顺序 */
+}
+header .logo {
+  position: relative;
+  font-weight: 700;
+  color: #000000;
+  text-decoration: none; /* 文字装饰 */
+  font-size: 2em; /* 字体大小 */
+  text-transform: uppercase; /* 字体大写 */
+  letter-spacing: 2px; /* 字符间距 */
+  transition: 0.6s;
+}
+header ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li {
+  position: relative;
+  list-style: none;
+}
+header ul li a {
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #000000;
+  letter-spacing: 2px;
+  font-weight: 500px;
+  transition: 0.6s;
+}
+header.sticky .logo,
+header.sticky ul li a {
+  color: #000;
+}
+header.sticky {
+  padding: 5px 100px;
+  background: #fff;
 }
 #menu{
   margin: 0;
@@ -44,22 +94,29 @@ html {
 }
 
 h1 {
-  font-size: 40px;
-  text-align: center;
-  margin: 0;
-  padding: 20px 0;
-  color: #861111;
-  text-shadow: 3px 2px 1px #d7d6d6;
-}
-
-h2 {
-  font-size: 25px;
+  font-size: 30px;
   letter-spacing: 0.8px;
-  text-align:center;
+  text-align:left;
+  padding-left:6cm;
 }
 
- li {
+p{
+  font-size: 17px;
+  padding-left:6cm;
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+main li {
+   margin: 0;
+   padding: 0;
    flex-direction: column;
+   text-align:left;
+   padding-left:6cm;
+   list-style:none;
+   font-size: 17px;
+   line-height: 2;
+   letter-spacing: 1px;
 }
 
 html {
@@ -67,18 +124,14 @@ html {
 }
 
 body {
-  width: 1300px;
+  width: 1700px;
   margin: 0 auto;
   background-color: #f3f3f3;
   border: 1px solid #0000002e;
-  font-size: 15px;
-  line-height: 1.9;
-  letter-spacing: 1px;
-  text-align:center;
 }
 
 a:link {
-  color: #90236f;
+  color: #393a41;
 }
 a:hover {
     text-decoration: none;
