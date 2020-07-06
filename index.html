@@ -10,39 +10,42 @@
 
 <body>
     <header>
-        <h1>294880776的个人网站</h1>
+            <a href="#" class="logo">294880776</a>
+            <ul id="menu">
+            <ul>
+              <li><a href="#">主页</a></li>
+              <li><a href="#">文章</a></li>
+              <li><a href="#">图集</a></li>
+              <li><a href="#">关于</a></li>
+            </ul>
     </header>
-
-    <nav>
-      <ul id="menu">
-        <ul>
-          <li><a class="active" href="#">主页</a></li>
-          <li><a href="#">文章</a></li>
-          <li><a href="#">图集</a></li>
-          <li><a href="#">关于</a></li>
-        </ul>
-      </nav>
+<section class="banner"></section>
+<script type="text/javascript">
+window.addEventListener("scroll",function(){
+  var header=document.querySelector("header");
+  header.classList.toggle("sticky",window.scrollY>0);
+})
+</script>
 
     <main>
         <img src="images/2.jpg" alt="我的头像">
-        <h2>前言</h2>
+        <h1>前言</h1><br>
         <p>你好！</p>
         <p>我是294880776，这是我的个人网站。 </p>
         <p>感谢你能打开这个网站，以下是些许个人介绍。</p>
-        <p>我个人有很多兴趣爱好，比如：
-        <p>
+        <p>我个人有很多兴趣爱好，比如：</p>
 
-        <ul>
-            <li> PC超频相关 </li>
-            <li> 电子产品、部分家电(半桶水) </li>
-            <li> 单机游戏：P社群星、hoi、全战、Skyrim、M&B等 </li>
-            <li> 网游：WOT、星际公民等 </li>
-            <li> 吃的 </li>
-            <li> SNH48 Group </li>
-        </ul>
+        <ol>
+            <li> -PC超频相关 </li>
+            <li> -电子产品、部分家电(半桶水) </li>
+            <li> -单机游戏：P社群星、hoi、全战、Skyrim、M&B等 </li>
+            <li> -网游：WOT、星际公民等 </li>
+            <li> -吃的 </li>
+            <li> -SNH48 Group </li>
+        </ol>
 
         <p>这是我的<a href="https://weibo.com/5281264635/"
-            title="该微博仅代表个人言论">微博</a>，欢迎视奸！<p>
+            title="该微博仅代表个人言论">微博</a>，欢迎视奸！</p>
     </main>
 
 
@@ -50,7 +53,6 @@
 
 <footer>
       <p>Copyright © 2020 294880776. Designed by 秌月無痕.</p>
-      <button>切换用户</button>
     </footer>
 </body>
 
