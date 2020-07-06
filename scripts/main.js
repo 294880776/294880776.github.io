@@ -9,26 +9,11 @@ myImage.onclick = function() {
     }
 };
 
-let myButton = document.querySelector('button');
-let myHeading = document.querySelector('h1');
+// 添加滚动事件
+window.addEventListener('scroll', function() {
+  //获取元素
+  var header = document.querySelector("header");
+  // 添加类
+  header.classList.toggle("sticky", window.scrollY > 0 )
+});
 
-function setUserName() {
-  let myName = prompt('请输入你的名字。');
-  if (!myName || myName === null) {
-    setUserName();
-  } else {
-    localStorage.setItem('name', myName);
-    myHeading.innerHTML = '欢迎进入294880776的个人网站，' + myName;
-  }
-}
-
-if (!localStorage.getItem('name')) {
-  setUserName();
-} else {
-  let storedName = localStorage.getItem('name');
-  myHeading.textContent = '欢迎进入294880776的个人网站，' + storedName;
-}
-
-myButton.onclick = function() {
-  setUserName();
-};
