@@ -16,4 +16,3 @@ window.addEventListener('scroll', function() {
   // 添加类
   header.classList.toggle("sticky", window.scrollY > 0 )
 });
-
