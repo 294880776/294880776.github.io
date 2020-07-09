@@ -22,7 +22,7 @@ header .logo {
   font-weight: 700;
   color: #000000;
   text-decoration: none; /* 文字装饰 */
-  font-size: 2em; /* 字体大小 */
+  font-size: 3em; /* 字体大小 */
   text-transform: uppercase; /* 字体大写 */
   letter-spacing: 2px; /* 字符间距 */
   transition: 0.6s;
@@ -37,23 +37,14 @@ header ul li {
   position: relative;
   list-style: none;
 }
-header ul li a {
-  position: relative;
-  margin: 0 15px;
-  text-decoration: none;
-  color: #000000;
-  letter-spacing: 2px;
-  font-weight: 500px;
-  transition: 0.6s;
-}
-header.sticky .logo,
-header.sticky ul li a {
+header.sticky .logo {               /* 导航栏logo before */
   color: #000;
 }
-header.sticky {
+header.sticky {                       /* 导航栏before */
   padding: 5px 100px;
   background: #fff;
 }
+
 #menu{
   margin: 0;
   padding: 0;
@@ -74,6 +65,8 @@ header.sticky {
   transition: 0.6s all;
   padding: 14px 90px;
   text-transform: uppercase;
+  margin: 0 15px;
+  letter-spacing: 2px;
 }
 #menu li a:before{
   content: "";
@@ -87,10 +80,34 @@ header.sticky {
 #menu li a:hover:before{
   right: 0;
 }
+.banner {
+  position: static;
+  width: 100%;
+  height: 52vh;
+  background: url(../images/bg.jpg);
+  background-size: cover; /* 背景大小：裁切 */
+}
 
 html {
   font-size: 10px;
   font-family: 'Open Sans', sans-serif;
+  background-color: #ccdef1;
+}
+
+img.img1 {
+  width: 35%;
+  height: auto;
+  position: relative;
+  top: -50px;
+  display: block;
+  margin: 0 auto;
+}
+
+.main_frame{
+  width: 1400px;
+  margin: 0 auto;
+  background-color: #f3f3f3;
+  border: 1px solid #0000002e;
 }
 
 h1 {
@@ -119,35 +136,22 @@ main li {
    letter-spacing: 1px;
 }
 
-html {
-  background-color: #ccdef1;
-}
-
-body {
-  width: 1200px;
-  margin: 0 auto;
-  background-color: #f3f3f3;
-  border: 1px solid #0000002e;
-}
-
 a:link {
-  color: #393a41;
+  color: #551A8B;
 }
 a:hover {
     text-decoration: none;
 }
 
-img {
-  display: block;
-  margin: 0 auto;
-  width: 40%;
-  height: auto;
+.footer_frame{
+  color: #d7d7d7;
+  margin：auto;
+  text-align:center;
+  font-size: 15px;
 }
 
 footer{
   margin: 0;
   padding: 0;
   background: #393a41;
-  text-align:center;
-  color: #d7d7d7
 }
