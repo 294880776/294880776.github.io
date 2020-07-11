@@ -2,9 +2,9 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>294880776的个站</title>
+    <title>主页-294880776的个站</title>
     <link href="https://fonts.font.im/css?family=Open+Sans" rel="stylesheet" type="text/css">
-    <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/style_index.css" rel="stylesheet">
     <script src="scripts/main.js" defer></script>
 </head>
 
@@ -13,13 +13,15 @@
             <a href="#" class="logo">294880776</a>
             <ul id="menu">
             <ul>
-              <li><a href="#">主页</a></li>
-              <li><a href="#">文章</a></li>
-              <li><a href="#">图集</a></li>
-              <li><a href="#">关于</a></li>
+              <li><a href="index.html">主页</a></li>
+              <li><a href="blog.html">文章</a></li>
+              <li><a href="picture.html">杂项</a></li>
+              <li><a href="about.html">关于</a></li>
             </ul>
     </header>
+
 <section class="banner"></section>
+
 <script type="text/javascript">
 window.addEventListener("scroll",function(){
   var header=document.querySelector("header");
@@ -29,8 +31,12 @@ window.addEventListener("scroll",function(){
 
     <main>
       <div class="main_frame">
-        <img class="img1" img src="images/2.jpg">
+        <img class="img1" img src="images/2.jpg"
+             alt="抱着西米露营业的玉珍儿"
+             title="CKG48-谯玉珍的微博照片">
+
         <h1>前言</h1><br>
+
         <p>你好！</p><br>
         <p>我是294880776，这是我的个人网站。 </p>
         <p>感谢你能打开这个网站，以下是些许个人介绍。</p><br>
@@ -46,7 +52,13 @@ window.addEventListener("scroll",function(){
         </ol><br>
 
         <p>这是我的<a href="https://weibo.com/5281264635/"
-            title="该微博仅代表个人言论">微博</a>，欢迎视奸！</p><br></div>
+            title="该微博仅代表个人言论">微博</a>，欢迎视奸！</p><br>
+        <div class="main_audio_frame">
+            <canvas id='canvas' width="530" height="350"></canvas>
+            <br><br>
+            <audio src="audio/mpeg/再爱一回.mp3" id="audio" controls>audio element not supported autoplay="autoplay" </audio>
+          <script>audio.crossOrigin = "anonymous";</script></div>
+      </div>
     </main>
 
 
