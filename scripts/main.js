@@ -1,25 +1,25 @@
 let myImage = document.querySelector('img');
 
-myImage.onclick = function() {
+myImage.onclick = function () {
     let mySrc = myImage.getAttribute('src');
-    if(mySrc === 'images/2.jpg') {
-      myImage.setAttribute('src', 'images/1.jpg');
+    if (mySrc === 'images/2.jpg') {
+        myImage.setAttribute('src', 'images/1.jpg');
     } else {
-      myImage.setAttribute('src', 'images/2.jpg');
+        myImage.setAttribute('src', 'images/2.jpg');
     }
 };
 
 // 添加滚动事件
-window.addEventListener('scroll', function() {
-  //获取元素
-  var header = document.querySelector("header");
-  // 添加类
-  header.classList.toggle("sticky", window.scrollY > 0 )
+window.addEventListener('scroll', function () {
+    //获取元素
+    var header = document.querySelector("header");
+    // 添加类
+    header.classList.toggle("sticky", window.scrollY > 0)
 });
 
 window.AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext;
 
-window.onload = function() {
+window.onload = function () {
     var audio = document.getElementById('audio');
     var ctx = new AudioContext();
     var analyser = ctx.createAnalyser();
@@ -41,12 +41,13 @@ window.onload = function() {
         capHeight = 2,
         capStyle = '#e9e2e2',
         meterNum = 800 / (10 + 2), //count of the meters
-        capYPositionArray = []; ////store the vertical position of hte caps for the preivous frame
+        capYPositionArray = [], gradient; ////store the vertical position of hte caps for the preivous frame
     ctx = canvas.getContext('2d'),
-    gradient = ctx.createLinearGradient(0, 0, 0, 300);
-    gradient.addColorStop(1, '#081033');
-    gradient.addColorStop(0.8, '#171c5e');
-    gradient.addColorStop(0.1, '#f00');
+        gradient = ctx.createLinearGradient(0, 0, 0, 300);
+    gradient.addColorStop(1, '#09133d');
+    gradient.addColorStop(0.8, '#27175e');
+    gradient.addColorStop(0.2, '#f00');
+
     // loop
     function renderFrame() {
         var array = new Uint8Array(analyser.frequencyBinCount);
@@ -57,7 +58,8 @@ window.onload = function() {
             var value = array[i * step];
             if (capYPositionArray.length < Math.round(meterNum)) {
                 capYPositionArray.push(value);
-            };
+            }
+            ;
             ctx.fillStyle = capStyle;
             //draw the cap, with transition effect
             if (value < capYPositionArray[i]) {
@@ -65,11 +67,13 @@ window.onload = function() {
             } else {
                 ctx.fillRect(i * 12, cheight - value, meterWidth, capHeight);
                 capYPositionArray[i] = value;
-            };
+            }
+            ;
             ctx.fillStyle = gradient; //set the filllStyle to gradient for a better look
-            ctx.fillRect(i * 12 /*meterWidth+gap*/ , cheight - value + capHeight, meterWidth, cheight); //the meter
+            ctx.fillRect(i * 12 /*meterWidth+gap*/, cheight - value + capHeight, meterWidth, cheight); //the meter
         }
         requestAnimationFrame(renderFrame);
     }
+
     renderFrame();
 };
