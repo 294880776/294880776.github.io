@@ -134,6 +134,15 @@ p {
     letter-spacing: 1px;
 }
 
+.title_frame {
+    margin: 20px 0 50px;
+    text-align: center;
+}
+
+.text_frame {
+    margin: 0 55px 0 0;
+}
+
 main li {
     margin: 0;
     flex-direction: column;

@@ -127,23 +127,23 @@ html {
 }
 
 .gallery {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-  margin-bottom: calc(1.0 * 1rem);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-bottom: calc(1.0 * 1rem);
 }
 
 .gallery_item {
-  display: inline-block;
-  margin-right: 16px;
-  margin-bottom: 16px;
-  text-align: center;
-  vertical-align: top;
-  width: 100%;
+    display: inline-block;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    text-align: center;
+    vertical-align: top;
+    width: 100%;
 }
 
 .gallery .gallery_item {
-	max-width: calc((100% - 16px * 1) / 2);
+    max-width: calc((100% - 16px * 1) / 2);
 }
 
 h1 {

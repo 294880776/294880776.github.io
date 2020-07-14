@@ -2,22 +2,38 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>杂项—294880776的个站</title>
     <link href="https://fonts.font.im/css?family=Open+Sans" rel="stylesheet" type="text/css">
     <link href="styles/style_picture.css" rel="stylesheet">
-    <script src="scripts/main.js" defer></script>
+    <script src="scripts/lb.js"></script>
+    <script>
+        window.onload = function () {
+            // 轮播选项
+            const options = {
+                id: 'lb-1',              // 轮播盒ID
+                speed: 600,              // 轮播速度(ms)
+                delay: 4000,             // 轮播延迟(ms)
+                direction: 'left',       // 图片滑动方向
+                moniterKeyEvent: true,   // 是否监听键盘事件
+                moniterTouchEvent: true  // 是否监听屏幕滑动事件
+            }
+            const lb = new Lb(options);
+            lb.start();
+        }
+    </script>
 </head>
 
 <body>
 <header>
     <a href="#" class="logo">294880776</a>
     <ul id="menu">
-        <ul>
-            <li><a href="index.html">主页</a></li>
-            <li><a href="blog.html">文章</a></li>
-            <li><a href="picture.html">杂项</a></li>
-            <li><a href="about.html">关于</a></li>
-        </ul>
+        <li><a href="index.html">主页</a></li>
+        <li><a href="blog.html">文章</a></li>
+        <li><a href="picture.html">杂项</a></li>
+        <li><a href="about.html">关于</a></li>
+    </ul>
 </header>
 
 <section class="banner"></section>
@@ -31,8 +47,41 @@
 
 <main>
     <div class="blog_frame">
-        <p>测试测试测试测试测试</p><br><br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="lb-box" id="lb-1">
+            <!-- 轮播内容 -->
+            <div class="lb-content">
+                <div class="lb-item active">
+                    <img src="images/3.jpg" alt="抱书的玉珍" width="100%" height="auto">
+                </div>
+                <div class="lb-item">
+                    <img src="images/4.jpg" alt="拿俩假草莓的玉珍" width="100%" height="auto">
+                </div>
+                <div class="lb-item">
+                    <img src="images/5.jpg" alt="抱书的玉珍x2" width="100%" height="auto">
+                </div>
+                <div class="lb-item">
+                    <img src="images/6.jpg" alt="街拍扶帽的玉珍" width="100%" height="auto">
+                </div>
+                <div class="lb-item">
+                    <img src="images/7.jpg" alt="打的手势的玉珍" width="100%" height="auto">
+                </div>
+                <div class="lb-item">
+                    <img src="images/8.jpg" alt="闭眼遮阳的玉珍" width="100%" height="auto">
+                </div>
+            </div>
+            <!-- 轮播标志 -->
+            <ol class="lb-sign">
+                <li class="active">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+            </ol>
+            <!-- 轮播控件 -->
+            <div class="lb-ctrl left">＜</div>
+            <div class="lb-ctrl right">＞</div>
+        </div>
     </div>
 </main>
 
