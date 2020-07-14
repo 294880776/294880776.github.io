@@ -105,12 +105,12 @@ html {
 }
 
 img.img1 {
-    width: 35%;
+    width: 20%;
     height:  auto;
-    position: relative;
-    top: -50px;
-    display: block;
-    margin: 0 auto;
+    margin: 0 40px 0 190px;
+    float:left;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
 .blog_frame {
@@ -121,14 +121,14 @@ img.img1 {
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 32px;
     letter-spacing: 0.8px;
     text-align: left;
     padding-left: 6cm;
 }
 
 p {
-    font-size: 17px;
+    font-size: 19px;
     padding-left: 6cm;
     line-height: 2;
     letter-spacing: 1px;
@@ -140,7 +140,7 @@ p {
 }
 
 .text_frame {
-    margin: 0 55px 0 0;
+    margin: 120px 55px 50px 0;
 }
 
 main li {
